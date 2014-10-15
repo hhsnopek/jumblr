@@ -1,0 +1,25 @@
+{
+  "name": "jumblr",
+  "version": "0.0.1",
+  "author": "Henry Snopek <hhsnopek@gmail.com>",
+  "description": "Jade Tubmlr Mixins",
+  "main": "lib",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hhsnopek/jumbr"
+  },
+  "devDependencies": {
+    "mocha": "1.x",
+    "chai": "1.9.x",
+    "coffeelint": "1.x",
+    "coffee-script": "1.8.x",
+    "jade": "1.7.x"
+  },
+  "peerDependencies": {
+    "jade": "1.7.x"
+  },
+  "scripts": {
+    "test": "npm run lint && mocha"
+  }
+}

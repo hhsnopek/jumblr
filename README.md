@@ -43,6 +43,11 @@ output:
 ```
 
 ## Mixins
-```
+```jade
+//- jumblr - Standard tumblr block
 +jumblr(type) //- type as String
+
+//- jumblrStr - Standard tumblr block as String
+//- sets var (String) jumblrStr
++jumblrStr(type, content) //- type, content as String
 ```

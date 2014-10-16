@@ -14,7 +14,7 @@ _expected = (folder, file) ->
 describe 'jumblr', ->
   chai.should()
 
-  it 'should render without a jade block', ->
+  it 'should render without a jade empty', ->
     @fixture = _fixture('jumblr', 'empty')
     @expected = _expected('jumblr', 'empty')
     @fixture.should.equal(@expected)
@@ -43,6 +43,11 @@ describe 'jumblrStr', ->
     @fixture.should.equal(@expected)
 
   it 'should render with nested blocks', ->
+    @fixture = _fixture('jumblrStr', 'block')
+    @expected = _expected('jumblrStr', 'block')
+    @fixture.should.equal(@expected)
+
+  it 'should render with nested strings', ->
     @fixture = _fixture('jumblrStr', 'nested')
     @expected = _expected('jumblrStr', 'nested')
     @fixture.should.equal(@expected)

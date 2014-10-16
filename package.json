@@ -1,6 +1,6 @@
 {
   "name": "jumblr",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Henry Snopek <hhsnopek@gmail.com>",
   "description": "Jade Tubmlr Mixins",
   "main": "lib",

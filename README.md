@@ -22,32 +22,31 @@ Jade Tubmlr Mixins
 ## Usage
 include the `jumblr.jade` at the top of your main jade file:
 ```jade
-include node_modules/jumblr/lib/jumblr.jade
+include node_modules/jumblr/lib/jumblr
 ```
 
-### Example
+## Mixins
 
+`+jumblr(type)` - Standard tumblr block
 ```jade
 +jumblr('Video')
   li(class="post video")
     {Video-500}
     +jumblr('Caption')
       div(class="caption") {Caption}
-```
-output:
-```html
+
+//- output
 {block:Video}
 <li class="post video">{Video-500}{block:Caption}
   <div class="caption">{Caption}</div>{/block:Caption}
 </li>{/block:Video}
 ```
 
-## Mixins
+`jumblrStr(type, content)` - Standard tumblr block as string
 ```jade
-//- jumblr - Standard tumblr block
-+jumblr(type) //- type as String
++jumblrStr('IndexPage', 'optional-class')
+section(class= jumblrStr)
 
-//- jumblrStr - Standard tumblr block as String
-//- sets var (String) jumblrStr
-+jumblrStr(type, content) //- type, content as String
+//- output
+<section class="{block:IndexPage}optional-class{/block:IndexPage}"></section>
 ```

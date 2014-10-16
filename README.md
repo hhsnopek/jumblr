@@ -51,7 +51,7 @@ section(class= jumblrStr)
 <section class="{block:IndexPage}optional-class{/block:IndexPage}"></section>
 ```
 
-`+jumblrStrs({type: content, type: content})` - Standard tumblr block list as string (Great for concating tags)
+`+jumblrStrs({type: content, type: content})` - Standard tumblr block list as string (Great for concatenating tags)
 ```jade
 - videoPost = {'VideoThumbnail': 'video', 'Thumbnail': 'thumbnail'}
 +jumblrStrList(videoPost)

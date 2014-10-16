@@ -42,11 +42,21 @@ include node_modules/jumblr/lib/jumblr
 </li>{/block:Video}
 ```
 
-`jumblrStr(type, content)` - Standard tumblr block as string
+`+jumblrStr(type, content)` - Standard tumblr block as string (Great for nesting tags)
 ```jade
 +jumblrStr('IndexPage', 'optional-class')
 section(class= jumblrStr)
 
 //- output
 <section class="{block:IndexPage}optional-class{/block:IndexPage}"></section>
+```
+
+`+jumblrStrs({type: content, type: content})` - Standard tumblr block list as string (Great for concating tags)
+```jade
+- videoPost = {'VideoThumbnail': 'video', 'Thumbnail': 'thumbnail'}
++jumblrStrList(videoPost)
+div(class= jumblrStrList) {VideoThumbnailURL}
+
+//- output
+<div class="{block:VideoThumbnail}video{/block:VideoThumbnail}{block:Thumbnail}thumbnail{/block:Thumbnail}">{VideoThumbnailURL}</div>
 ```

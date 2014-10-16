@@ -12,3 +12,14 @@ mixin jumblr(type)
 //- returns   jumblrStr
 mixin jumblrStr(type, content)
   - jumblrStr = '{block:' + type + '}' + content + '{/block:' + type + '}'
+
+//- jumblrStrList - Standard tumblr block list as string
+//- {lists}   (array)
+//- returns   jumblrStrList
+//- lists -   [{String, String}, {String, String}]
+mixin jumblrStrList(listObject)
+  each content, type in listObject
+    if jumblrStrList == undefined
+      - jumblrStrList = '{block:' + type + '}' + content + '{/block:' + type + '}'
+    else
+      - jumblrStrList += '{block:' + type + '}' + content + '{/block:' + type + '}'

@@ -51,3 +51,21 @@ describe 'jumblrStr', ->
     @fixture = _fixture('jumblrStr', 'nested')
     @expected = _expected('jumblrStr', 'nested')
     @fixture.should.equal(@expected)
+
+describe 'jumblrStrList', ->
+  chai.should()
+
+  it 'should render with empty object', ->
+    @fixture = _fixture('jumblrStrList', 'empty')
+    @expected = _expected('jumblrStrList', 'empty')
+    @fixture.should.equal(@expected)
+
+  it 'should render with a single key', ->
+    @fixture = _fixture('jumblrStrList', 'single')
+    @expected = _expected('jumblrStrList', 'single')
+    @fixture.should.equal(@expected)
+
+  it 'should render with multiple keys', ->
+    @fixture = _fixture('jumblrStrList', 'multi')
+    @expected = _expected('jumblrStrList', 'multi')
+    @fixture.should.equal(@expected)

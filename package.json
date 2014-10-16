@@ -1,13 +1,13 @@
 {
   "name": "jumblr",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Henry Snopek <hhsnopek@gmail.com>",
   "description": "Jade Tubmlr Mixins",
   "main": "lib",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hhsnopek/jumbr"
+    "url": "https://github.com/hhsnopek/jumblr.git"
   },
   "devDependencies": {
     "mocha": "1.x",

@@ -17,8 +17,7 @@ mixin jumblrStr(type, content)
 //- {listObject}   (Object)
 //- returns   jumblrStrList
 mixin jumblrStrList(listObject)
+  if jumblrStrList == undefined || jumblrStrList != ""
+    - jumblrStrList = ""
   each content, type in listObject
-    if jumblrStrList == undefined
-      - jumblrStrList = '{block:' + type + '}' + content + '{/block:' + type + '}'
-    else
-      - jumblrStrList += '{block:' + type + '}' + content + '{/block:' + type + '}'
+    - jumblrStrList += '{block:' + type + '}' + content + '{/block:' + type + '}'

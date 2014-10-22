@@ -44,19 +44,24 @@ include node_modules/jumblr/lib/jumblr
 
 `+jumblrStr(type, content)` - Standard tumblr block as string (Great for nesting tags)
 ```jade
-+jumblrStr('IndexPage', 'optional-class')
++jumblrStr('IndexPage', 'optional-class ')
 section(class= jumblrStr)
 
 //- output
-<section class="{block:IndexPage}optional-class{/block:IndexPage}"></section>
+<section class="{block:IndexPage}optional-class {/block:IndexPage}"></section>
 ```
 
-`+jumblrStrs({type: content, type: content})` - Standard tumblr block list as string (Great for concatenating tags)
+`+jumblrStrList({type: content, type: content})` - Standard tumblr block list as string (Great for concatenating tags)
 ```jade
-- videoPost = {'VideoThumbnail': 'video', 'Thumbnail': 'thumbnail'}
-+jumblrStrList(videoPost)
-div(class= jumblrStrList) {VideoThumbnailURL}
++jumblrStr("NoSearchResults", "no-results ")
++jumblrStrList({"TagPage": "tag ", "SearchPage": "search "+jumblrStr})
++jumblrStrList({"IndexPage": "index "+jumblrStrList, "PermalinkPage": "permalink "})
+
+body(class= jumblrStrList)
 
 //- output
-<div class="{block:VideoThumbnail}video{/block:VideoThumbnail}{block:Thumbnail}thumbnail{/block:Thumbnail}">{VideoThumbnailURL}</div>
+<body class="{block:IndexPage}index {block:TagPage}tag {/block:TagPage}{block:SearchPage}search {block:NoSearchResults}no-results {/block:NoSearchResults}{/block:SearchPage}{/block:IndexPage}{block:PermalinkPage}permalink {/block:PermalinkPage}"></body>
 ```
+
+## License
+MIT

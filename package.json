@@ -1,6 +1,6 @@
 {
   "name": "jumblr",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Henry Snopek <hhsnopek@gmail.com>",
   "description": "Jade Tubmlr Mixins",
   "main": "lib",
@@ -14,9 +14,6 @@
     "chai": "1.9.x",
     "coffeelint": "1.x",
     "coffee-script": "1.8.x",
-    "jade": "1.7.x"
-  },
-  "peerDependencies": {
     "jade": "1.7.x"
   },
   "scripts": {

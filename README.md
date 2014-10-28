@@ -63,5 +63,17 @@ body(class= jumblrStrList)
 <body class="{block:IndexPage}index {block:TagPage}tag {/block:TagPage}{block:SearchPage}search {block:NoSearchResults}no-results {/block:NoSearchResults}{/block:SearchPage}{/block:IndexPage}{block:PermalinkPage}permalink {/block:PermalinkPage}"></body>
 ```
 
+`+jumblrVar(type, preWhitespace)` - Standard tumblr variable (Great for removing "missing space" error)
+```jade
+p
+  +jumblrVar('Scallywag')
+  | : Oh
+  +jumblrVar('Caption', true)
+    |  my Captain
+
+//- output
+<p>{Scallywag}: Oh {Caption} my Captain</p>
+```
+
 ## License
 MIT

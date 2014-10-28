@@ -24,7 +24,7 @@ describe 'jumblr', ->
     @expected = _expected('jumblr', 'block')
     @fixture.should.equal(@expected)
 
-  it 'should render with nested usage', ->
+  it 'should render with nested blocks', ->
     @fixture = _fixture('jumblr', 'nested')
     @expected = _expected('jumblr', 'nested')
     @fixture.should.equal(@expected)
@@ -68,4 +68,27 @@ describe 'jumblrStrList', ->
   it 'should render with multiple keys', ->
     @fixture = _fixture('jumblrStrList', 'multi')
     @expected = _expected('jumblrStrList', 'multi')
+    @fixture.should.equal(@expected)
+
+describe 'jumblrVar', ->
+  chai.should()
+
+  it 'should render without any arguments', ->
+    @fixture = _fixture('jumblrVar', 'empty')
+    @expected = _expected('jumblrVar', 'empty')
+    @fixture.should.equal(@expected)
+
+  it 'should render with preWhitespace', ->
+    @fixture = _fixture('jumblrVar', 'preWhitespace')
+    @expected = _expected('jumblrVar', 'preWhitespace')
+    @fixture.should.equal(@expected)
+
+  it 'should render with a block', ->
+    @fixture = _fixture('jumblrVar', 'block')
+    @expected = _expected('jumblrVar', 'block')
+    @fixture.should.equal(@expected)
+
+  it 'should render with nested blocks', ->
+    @fixture = _fixture('jumblrVar', 'nested')
+    @expected = _expected('jumblrVar', 'nested')
     @fixture.should.equal(@expected)

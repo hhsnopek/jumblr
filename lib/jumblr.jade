@@ -14,10 +14,22 @@ mixin jumblrStr(type, content)
   - jumblrStr = '{block:' + type + '}' + content + '{/block:' + type + '}'
 
 //- jumblrStrList - Standard tumblr block list as string
-//- {listObject}   (Object)
-//- returns   jumblrStrList
+//- {listObject}    (Object)
+//- returns         jumblrStrList
 mixin jumblrStrList(listObject)
   if jumblrStrList == undefined || jumblrStrList != ""
     - jumblrStrList = ""
   each content, type in listObject
     - jumblrStrList += '{block:' + type + '}' + content + '{/block:' + type + '}'
+
+//- jumblrVar
+//- {type}          (String)
+//- {preWhitespace} (Boolean)
+mixin jumblrVar(type, preWhitespace)
+  - preWhitespace = preWhitespace || false
+  if preWhitespace
+    = " {" + type + "}"
+    block
+  else
+    = "{" + type + "}"
+    block

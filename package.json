@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "mocha": "2.x",
-    "chai": "1.9.x",
+    "chai": "1.10.x",
     "coffeelint": "1.x",
     "coffee-script": "1.8.x",
     "jade": "1.7.x"

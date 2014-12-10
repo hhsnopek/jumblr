@@ -1,6 +1,12 @@
 <h1 align='center'>Jumblr</h1>
 
 <p align="center">
+  <a href="https://nodei.co/npm/jumblr/">
+    <img src="https://nodei.co/npm/jumblr.png?downloads=true">  
+  </a>
+</p>
+
+<p align="center">
   <a title='NPM version' href="http://badge.fury.io/js/jumblr">
     <img src='http://img.shields.io/npm/v/jumblr.svg?style=flat' />
   </a>

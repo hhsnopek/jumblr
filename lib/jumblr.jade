@@ -1,19 +1,19 @@
 
-//- jumblr - Standard tumblr block
+//- jumblr - Standard Tumblr block
 //- {type}  (String)
 mixin jumblr(type)
   ='{block:' + type + '}'
   block
   ='{/block:' + type + '}'
 
-//- jumblrStr - Standard tumblr block for strings
+//- jumblrStr - Standard Tumblr block for strings
 //- {type}    (String)
 //- {content} (String)
 //- returns   jumblrStr
 mixin jumblrStr(type, content)
   - jumblrStr = '{block:' + type + '}' + content + '{/block:' + type + '}'
 
-//- jumblrStrList - Standard tumblr block list as string
+//- jumblrStrList - Standard Tumblr block list as string
 //- {listObject}    (Object)
 //- returns         jumblrStrList
 mixin jumblrStrList(listObject)
@@ -22,7 +22,7 @@ mixin jumblrStrList(listObject)
   each content, type in listObject
     - jumblrStrList += '{block:' + type + '}' + content + '{/block:' + type + '}'
 
-//- jumblrVar
+//- jumblrVar - Standard Tumblr variable
 //- {type}          (String)
 //- {preWhitespace} (Boolean)
 mixin jumblrVar(type, preWhitespace)

@@ -18,7 +18,7 @@
   </a>
 </p>
 
-Jade Tubmlr Mixins
+Jade Tumblr Mixins
 
 
 ## Installation
@@ -33,7 +33,7 @@ include node_modules/jumblr/lib/jumblr
 
 ## Mixins
 
-`+jumblr(type)` - Standard tumblr block
+`+jumblr(type)` - Standard Tumblr block
 ```jade
 +jumblr('Video')
   li(class="post video")
@@ -48,7 +48,7 @@ include node_modules/jumblr/lib/jumblr
 </li>{/block:Video}
 ```
 
-`+jumblrStr(type, content)` - Standard tumblr block as string (Great for nesting tags)
+`+jumblrStr(type, content)` - Standard Tumblr block as string (Great for nesting tags)
 ```jade
 +jumblrStr('IndexPage', 'optional-class ')
 section(class= jumblrStr)
@@ -57,7 +57,7 @@ section(class= jumblrStr)
 <section class="{block:IndexPage}optional-class {/block:IndexPage}"></section>
 ```
 
-`+jumblrStrList({type: content, type: content})` - Standard tumblr block list as string (Great for concatenating tags)
+`+jumblrStrList({type: content, type: content})` - Standard Tumblr block list as string (Great for concatenating tags)
 ```jade
 +jumblrStr("NoSearchResults", "no-results ")
 +jumblrStrList({"TagPage": "tag ", "SearchPage": "search "+jumblrStr})
@@ -69,7 +69,7 @@ body(class= jumblrStrList)
 <body class="{block:IndexPage}index {block:TagPage}tag {/block:TagPage}{block:SearchPage}search {block:NoSearchResults}no-results {/block:NoSearchResults}{/block:SearchPage}{/block:IndexPage}{block:PermalinkPage}permalink {/block:PermalinkPage}"></body>
 ```
 
-`+jumblrVar(type, preWhitespace)` - Standard tumblr variable (Great for removing "missing space" error)
+`+jumblrVar(type, preWhitespace)` - Standard Tumblr variable (Great for removing "missing space" error)
 ```jade
 p
   +jumblrVar('Scallywag')

@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "mocha": "2.x",
-    "chai": "1.10.x",
+    "chai": "2.2.x",
     "coffeelint": "1.x",
-    "coffee-script": "1.8.x",
-    "jade": "1.8.x"
+    "coffee-script": "1.9.x",
+    "jade": "1.9.x"
   },
   "scripts": {
     "test": "mocha",

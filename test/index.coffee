@@ -14,7 +14,7 @@ _expected = (folder, file) ->
 describe 'jumblr', ->
   chai.should()
 
-  it 'should render without a jade empty', ->
+  it 'should render without any arguments', ->
     @fixture = _fixture('jumblr', 'empty')
     @expected = _expected('jumblr', 'empty')
     @fixture.should.equal(@expected)

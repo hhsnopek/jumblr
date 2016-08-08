@@ -10,7 +10,7 @@
     "url": "https://github.com/hhsnopek/jumblr.git"
   },
   "devDependencies": {
-    "mocha": "3.0.1",
+    "mocha": "3.0.2",
     "chai": "3.5.0",
     "coffeelint": "1.x",
     "coffee-script": "1.10.0",

@@ -22,6 +22,8 @@ Jade Tumblr Mixins
 
 
 ## Installation
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/hhsnopek/jumblr.svg)](https://greenkeeper.io/)
 - npm: `npm i jumblr`
 - tarball: see [latest releases](https://github.com/hhsnopek/jumblr/releases)
 
